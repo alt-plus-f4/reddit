@@ -1,36 +1,9 @@
 import { LucideProps, MessageSquare, User } from 'lucide-react'
+import { Trello } from 'lucide-react';
 
 export const Icons = {
   user: User,
-  logo: (props: LucideProps) => (
-    <svg {...props} viewBox='0 0 497 497'>
-      <g>
-        <path
-          d='m392 30c-71.75 0-71.75-30-143.5-30l128.5 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV'
-          fill='#c87044'
-        />
-        <path
-          d='m437 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV143.5 30-57.99 0-105 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV60z'
-          fill='#db905a'
-        />
-        <path
-          d='m392 60-15 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV478 0-41.355-33.645-75-75-75z'
-          fill='#ffd185'
-        />
-        <path
-          d='m407 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV177 12.678-19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV607 8.571 13.145 8.571 20.995v228.526c0 16.542 13.458 30 30 30h287c16.542 0 30-13.458 30-30z'
-          fill='#ffe8c2'
-        />
-        <g fill='#ffd185'>
-          <circle cx='392' cy='135' r='7.5' />
-          <circle cx='362' cy='165' r='7.5' />
-          <circle cx='105' cy='377' r='7.5' />
-          <circle cx='135' cy='407' r='7.5' />
-          <circle cx='105' cy='135' r='7.5' />
-        </g>
-      </g>
-    </svg>
-  ),
+  logo: Trello,
   google: (props: LucideProps) => (
     <svg {...props} viewBox='0 0 24 24'>
       <path
