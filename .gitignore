@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# secrets
+.env.example
+
 # next.js
 /.next/
 /out/
