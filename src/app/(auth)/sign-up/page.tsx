@@ -2,7 +2,7 @@ import { FC } from "react"
 import { cn } from "@/lib/utils"; 
 import { buttonVariants } from "@/components/ui/Button";
 import Link from "next/link";
-import SignIn from "@/components/SignIn";
+import SignUp from "@/components/SignUp";
 import { ChevronLeft } from "lucide-react";
 
 const page: FC = () => {
@@ -13,7 +13,7 @@ const page: FC = () => {
                 HOME
             </Link>
 
-            <SignIn/>
+            <SignUp/>
         </div>
 
     </div>;
