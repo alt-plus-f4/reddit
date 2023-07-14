@@ -1,9 +1,9 @@
 import { LucideProps, MessageSquare, User } from 'lucide-react'
-import { Trello } from 'lucide-react';
+import { MonitorDown } from 'lucide-react';
 
 export const Icons = {
   user: User,
-  logo: Trello,
+  logo: MonitorDown,
   google: (props: LucideProps) => (
     <svg {...props} viewBox='0 0 24 24'>
       <path
