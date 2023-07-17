@@ -1,9 +1,9 @@
 import { LucideProps, MessageSquare, User } from 'lucide-react'
-import { MonitorDown } from 'lucide-react';
+import { BsReddit } from 'react-icons/bs'
 
 export const Icons = {
   user: User,
-  logo: MonitorDown,
+  logo: BsReddit,
   google: (props: LucideProps) => (
     <svg {...props} viewBox='0 0 24 24'>
       <path
