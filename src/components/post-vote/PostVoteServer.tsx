@@ -32,7 +32,7 @@ const PostVoteServer = async ({
     }, 0)
 
     _currentVote = post.votes.find(
-      (vote) => vote.userId === session?.user?.id
+      (vote) => vote.userId === (session?.user as any).id
     )?.type
   } else {
     _votesAmt = initialVotesAmt!

@@ -20,7 +20,7 @@ const MiniCreatePost: FC<MiniCreatePostProps> = ({ session }) => {
     <div className='h-full px-6 py-4 flex justify-between gap-6'>
         <div className='relative'>
             <UserAvatar user={{
-                name: session?.user.name || null,
+                name: (session?.user as any).name || null,
                 image: session?.user?.image || null,
             }}
             />

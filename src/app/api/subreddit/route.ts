@@ -29,14 +29,14 @@ export async function POST(req: Request) {
     const subreddit = await db.subreddit.create({
       data: {
         name,
-        creatorId: session.user.id,
+        creatorId: (session.user as any).id,
       },
     })
 
     // creator also has to be subscribed
     await db.subscription.create({
       data: {
-        userId: session.user.id,
+        userId: (session.user as any).id,
         subredditId: subreddit.id,
       },
     })

@@ -22,7 +22,7 @@ export async function PATCH(req: Request) {
     // check if user has already voted on this post
     const existingVote = await db.vote.findFirst({
       where: {
-        userId: session.user.id,
+        userId: (session.user as any).id,
         postId,
       },
     })
@@ -48,7 +48,7 @@ export async function PATCH(req: Request) {
           where: {
             userId_postId: {
               postId,
-              userId: session.user.id,
+              userId: (session.user as any).id,
             },
           },
         })
@@ -81,7 +81,7 @@ export async function PATCH(req: Request) {
         where: {
           userId_postId: {
             postId,
-            userId: session.user.id,
+            userId: (session.user as any).id,
           },
         },
         data: {
@@ -116,7 +116,7 @@ export async function PATCH(req: Request) {
     await db.vote.create({
       data: {
         type: voteType,
-        userId: session.user.id,
+        userId: (session.user as any).id,
         postId,
       },
     })

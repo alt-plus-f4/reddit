@@ -26,7 +26,7 @@ const Layout = async ({ children, params: { slug } } : { children : React.ReactN
                 name: slug,
             },
             user: {
-                id: session.user.id,
+                id: (session.user as any).id,
             },
         }
     })
@@ -67,13 +67,13 @@ const Layout = async ({ children, params: { slug } } : { children : React.ReactN
                         </dd>
                     </div>
 
-                    {subreddit.creatorId == session?.user.id ? (
+                    {subreddit.creatorId == (session?.user as any).id ? (
                         <div className="flex justify-between gap-x-4 py-3">
                             <p className="text-gray-500">You created this community</p>
                         </div>
                     ) : null}
 
-                    {subreddit.creatorId !== session?.user.id ? (
+                    {subreddit.creatorId !== (session?.user as any).id ? (
                         <SubscribeLeaveToggle isSubscribed={isSubscribed} subredditId={subreddit.id} subredditName={subreddit.name} />
                     ) : null}
 

@@ -20,7 +20,7 @@ export async function PATCH(req: Request) {
       data: {
         text,
         postId,
-        authorId: session.user.id,
+        authorId: (session.user as any).id,
         replyToId,
       },
     })

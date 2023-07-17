@@ -1,4 +1,4 @@
-import { User } from 'next-auth';
+import { User } from './user-model';
 import { db } from '@/lib/db'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { nanoid } from 'nanoid'
@@ -23,7 +23,7 @@ export const authOptions: NextAuthOptions = {
     async session({ token, session }) {
       if (token) {
         session.user = {
-          id: token.id,
+          id: token.id || '',
           name: token.name,
           email: token.email,
           image: token.picture,
@@ -42,7 +42,7 @@ export const authOptions: NextAuthOptions = {
       })
 
       if (!dbUser) {
-        token.id = user!.id
+        token.id = user!.id || ''
         return token
       }
 

@@ -26,7 +26,7 @@ const SubscribeLeaveToggle = ({
   const { mutate: subscribe, isLoading: isSubLoading } = useMutation({
     mutationFn: async () => {
       const payload: SubscribeToSubredditPayload = {
-        subredditId,
+        name: subredditId,
       }
 
       const { data } = await axios.post('/api/subreddit/subscribe', payload)
@@ -47,8 +47,6 @@ const SubscribeLeaveToggle = ({
     },
     onSuccess: () => {
       startTransition(() => {
-        // Refresh the current route and fetch new data from the server without
-        // losing client-side browser or React state.
         router.refresh()
       })
       toast({
@@ -61,7 +59,7 @@ const SubscribeLeaveToggle = ({
   const { mutate: unsubscribe, isLoading: isUnsubLoading } = useMutation({
     mutationFn: async () => {
       const payload: SubscribeToSubredditPayload = {
-        subredditId,
+        name: subredditId,
       }
 
       const { data } = await axios.post('/api/subreddit/unsubscribe', payload)
@@ -76,8 +74,6 @@ const SubscribeLeaveToggle = ({
     },
     onSuccess: () => {
       startTransition(() => {
-        // Refresh the current route and fetch new data from the server without
-        // losing client-side browser or React state.
         router.refresh()
       })
       toast({
